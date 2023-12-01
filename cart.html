@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play studio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+
+    <script src="https://kit.fontawesome.com/2afa4a569d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
+</head>
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <img class="header__logo" src="images/logo.png" alt="logo">
+    
+        <form class="header__search-bar">
+            <input type="search" placeholder="Hľadať..." class="header__search--input">
+        </form> 
+
+        <div class="header__personal">
+            <i class="fa-solid fa-user"></i><a class="nav__text" href="login.html">Prihlásiť</a>
+            <i class="fa-solid fa-cart-shopping"></i><a class="nav__text" href="#">Košík</a>
+        </div>
+    </header>
+    
+    <!--Navigácia-->
+    <div class="nav">
+        <a class="nav__text nav__text--active" href="index.html">DOMOV</a>
+        <a class="nav__text" href="games2.html">HRY</a>
+        <a class="nav__text" href="consolesall.html">KONZOLY</a>
+        <a class="nav__text" href="accessoriesall.html">PRÍSLUŠENSTVO</a>
+    </div>
+
+    <!--Slajdy-->
+    <div class="glide">
+		<div class="glide__track" data-glide-el="track">
+		  <ul class="glide__slides">
+			<li class="glide__slide"><img src="images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+			<li class="glide__slide"><img src="images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+            <li class="glide__slide"><img src="images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+		  </ul>
+		</div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+            <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+            <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+        </div>
+    </div>
+
+    <script src="glide.min.js"></script> 
+
+    <script>
+        new Glide('.glide', {
+            autoplay: 7000,
+            type: "carousel"
+        }).mount()
+    </script>
+
+    <!-- formulár -->
+    <main>
+      <form class="form-order">
+          <h1 class="form-order__heading">PRODUKT</h1>
+          <div class="form-field">
+            <div class="cart-product">
+              <label  for="produkt" class="cart-product__label">Produkt</label>
+              <input type="text" name="produkt" id="produkt" readonly="" value="Názov hry" class="cart-product__input">
+            </div>
+            
+            <div class="cart-prize">
+              <label for="cena" class="cart-prize__label">Cena</label>
+              <input type="text" name="cena" id="cena" readonly="" value="40 &euro;" class="cart-prize__input">
+            </div>
+          </div>
+
+
+          <h1 class="form-order__heading">OSOBNÉ ÚDAJE</h1>
+          <div class="form-field">
+            <div class="cart-name">
+              <label for="meno" class="cart-name__label">Meno<span class="required" >*</span></label>
+              <input type="text" name="meno" required="" title="text" class="cart-name__input">
+            </div>
+          
+            <div class="cart-surname">
+              <label for="priezvisko" class="cart-surname__label">Priezvisko<span class="required">*</span></label>
+              <input type="text" name="priezvisko" id="priezvisko" required="" title="text" class="cart-surname__input">
+            </div>
+            
+            <div class="cart-number">
+              <label for="telefon" class="cart-number__label">Telefónne číslo</label>
+              <input type="tel" name="telefon" id="telefon" required class="cart-number__input">
+            </div>
+
+            <div class="cart-email">
+              <label for="email" class="cart-email__label">E-mail<span class="required">*</span></label>
+              <input type="email" name="email" id="email" required="" class="cart-email__input">
+            </div>
+          </div>
+
+
+          <h1 class="form-order__heading">DORUČOVACIA ADRESA</h1>
+          <div class="form-field">
+            <div class="cart-adress">
+              <label for="ulice" class="cart-adress__label">Ulica<span class="required" >*</span></label>
+              <input type="text" name="ulica" id="ulica" required="" title="text" class="cart-adress__input">
+            </div>
+
+            <div class="cart-city">
+              <label for="mesto" class="cart-city__label">Mesto<span class="required">*</span></label>
+              <input type="text" name="mesto" id="mesto" required="" class="cart-city__input">
+            </div>
+
+            <div class="cart-psc">
+              <label for="psc" class="cart-psc__label">PSČ<span class="required">*</span></label>
+              <input type="text" name="psc" id="psc" pattern="[0-9]{5}" required class="cart-psc__input">
+            </div>
+          </div>
+
+
+          <h1 class="form-order__heading">SPÔSOB DORUČENIA</h1>
+
+          <div class="form-radio">
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="dorucenie" id="osobné" value="osobné zadarmo" title="radio" class="radio-check__input">
+                <label for="osobni" class="radio-check__label">Osobný odber</label>
+              </div>
+
+              <div class="radio-info"><p>Zadarmo</p></div>
+            </div>
+
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="dorucenie" id="ppl" value="ppl" title="radio" class="radio-check__input">
+                <label for="ppl 2.50eur" class="radio-check__label">PPL</label>
+              </div>
+
+              <div class="radio-info"><p>2.50 &euro;</p></div>
+            </div>
+
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="dorucenie" id="posta" value="posta 5.50eur" class="radio-check__input">
+                <label for="posta" class="radio-check__label">Slovenská pošta</label>
+              </div>
+              <div class="radio-info"><p>5.50 &euro;</p></div>
+            </div>
+          </div>
+         
+
+          <h1 class="form-title">SPÔSOB PLATBY</h1>
+
+          <div class="form-radio">
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="platba" id="hotovost" value="hotovost zadarmo" class="radio-check__input">
+                <label for="hotovost" class="radio-check__label">V hotovosti</label>
+              </div>
+
+              <div class="radio-info"><p>Zadarmo</p></div>
+            </div>
+
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="platenie" id="prevod" value="prevod zadarmo" class="radio-check__input">
+                <label for="prevod" class="radio-check__label">Prevodom</label>
+              </div>
+              <div class="radio-info"><p>Zadarmo</p></div>
+            </div>
+          
+            <div class="radio-item">
+              <div class="radio-check">
+                <input type="radio" name="platenie" id="dobierka" value="dobierka 2eur" title="radio" class="radio-check__input">
+                <label for="online" class="radio-check__label">Na dobierku</label>
+              </div>
+
+              <div class="radio-info"><p>2 &euro;</p></div>
+            </div>
+          </div>
+
+          
+          <div class="form-field">
+            <label for="poznamky" class="form-field__notes">POZNÁMKY</label>
+            <textarea name="poznamky" id="poznamky" cols="30" rows="10" placeholder="Chcete nám ešte niečo vzkázať? Teraz máte príležitosť" class="form-field__textarea"></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" name="suhlas" id="suhlas" required="" class="form-checkbox__input">
+            <label for="suhlas" class="form-checkbox__label">Súhlasím s obchodnými podmienkami</label>
+          </div>
+
+          <!--<input type="hidden" name="_redirect" value="?">-->
+
+          <div class="card__button-wrapper btn-game"> 
+            <button class="btn btn--fill" type="submit" name="tlacitko">Objednať</button>
+        </div>
+      </form>
+    </main>
+
+    <section class="prefooter">
+      <div class="prefooter__information">
+          <iframe class="prefooter__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.0663554659254!2d17.107813076190986!3d48.14752595046879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8944cf0f91f9%3A0x17a42d96b2f80cfd!2sObchodn%C3%A1%2C%20811%2006%20Bratislava%2C%20Slovensko!5e0!3m2!1ssk!2scz!4v1700136519965!5m2!1ssk!2scz" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+          
+          <div class="prefooter__left-column">
+              <h2 class="prefooter__heading">O NÁS</h2>
+              <a class="prefooter__link" href="mailto:info@playstore.com">info@playstore.com</a>
+              <a class="prefooter__link" href="tel:+421703173297">+421 703 173 297</a>
+              <p class="prefooter__adress">Obchodná ulica, 811 06 Bratislava</p>
+          </div>
+          
+          <div class="prefooter__right-column">
+              <h2 class="prefooter__heading">ZÁZANÍCKY SERVIS</h2>
+              <p class="prefooter__text">Doprava a platba</p>
+              <p class="prefooter__text">Reklamácia</p>
+              <p class="prefooter__text">Obchodné podmienky</p>
+          </div>
+      </div>
+  </section>
+
+  <footer class="footer">
+      <div class="footer-icons">
+          <a href="https://www.facebook.com/" title="icon" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/" title="icon" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/" title="icon" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/" title="icon" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      
+      <div class="footer__nav">
+          <a class="footer__nav--text" href="index.html">DOMOV</a>
+          <a class="footer__nav--text" href="games2.html">HRY</a>
+          <a class="footer__nav--text" href="consolesall.html">KONZOLY</a>
+          <a class="footer__nav--text" href="accessoriesall.html">PRÍSLUŠENSTVO</a>
+      </div>
+  </footer>
+
+</body>
+</html>

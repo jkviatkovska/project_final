@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play studio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+
+    <script src="https://kit.fontawesome.com/2afa4a569d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
+</head>
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <img class="header__logo" src="images/logo.png" alt="logo">
+    
+        <form class="header__search-bar">
+            <input type="search" placeholder="Hľadať..." class="header__search--input">
+        </form> 
+
+        <div class="header__personal">
+            <i class="fa-solid fa-user"></i><a class="nav__text" href="login.html">Prihlásiť</a>
+            <i class="fa-solid fa-cart-shopping"></i><a class="nav__text" href="#">Košík</a>
+        </div>
+    </header>
+    
+    <!--Navigácia-->
+    <div class="nav">
+        <a class="nav__text nav__text--active" href="index.html">DOMOV</a>
+        <a class="nav__text" href="games2.html">HRY</a>
+        <a class="nav__text" href="consolesall.html">KONZOLY</a>
+        <a class="nav__text" href="accessoriesall.html">PRÍSLUŠENSTVO</a>
+    </div>
+
+    <div class="left-corner">
+        <a class="left-corner__link" href="index.html" title="home">
+            <i class="fa-solid fa-house left-corner__icon"></i></a>
+        &gt; PRIHLÁSENIE
+    </div>
+
+    <div class="account">
+        <div class="account__card">
+            <div class="account__input">
+                <h2 class="account__heading">PRIHLÁSENIE</h2>
+                <form class="account__form">
+                    <div class="account__fieldset">
+                        <div class="account__input-group">
+                            <label class="account__label" for="email">E-mail:</label>
+                            <input class="account__input-field" type="email" id="email" name="email" required placeholder="Zadajte e-mailovú adresu">
+                        </div>
+                    </div>
+                
+                    <div class="account__fieldset">
+                        <div class="account__input-group">
+                            <label for="account__label">Heslo:</label>
+                            <div class="account__password-container">
+                                <input class="account__password-field" type="password" id="password" name="password" required placeholder="Zadajte heslo">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card__button-wrapper login"> 
+                <button class="btn btn--fill btn--login">PRIHLÁSIŤ</button>                
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/" title="icon" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" title="icon" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/" title="icon" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/" title="icon" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        
+        <div class="footer__nav">
+            <a class="footer__nav--text" href="index.html">DOMOV</a>
+            <a class="footer__nav--text" href="games2.html">HRY</a>
+            <a class="footer__nav--text" href="consolesall.html">KONZOLY</a>
+            <a class="footer__nav--text" href="accessoriesall.html">PRÍSLUŠENSTVO</a>
+        </div>
+    </footer>
+
+</body>
+</html>
