@@ -22,397 +22,529 @@ a {
 
 @media screen and (min-width: 1100px) {
     /*Index*/
-/* Header */
+    /* Header */
 
-.header {
-    height: 85px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    align-items: center;
-}
+    .header {
+        height: 85px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+    }
 
-.header__logo {
-    width: 200px;
-    height: auto;
-}
+    .header__logo {
+        width: 200px;
+        height: auto;
+    }
 
+    .fa-solid {
+        color: white;
+    }
 
-.fa-solid {
-    color: white;
-}
+    .nav__text {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
 
-.nav__text {
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s;
-}
+    .nav__text:hover {
+        transform: scale(1.5);
+    }
 
-.nav__text:hover {
-    transform: scale(1.5);
-}
+    .header__search--input {
+        padding: 10px 40px 10px 10px;
+        width: 500px; 
+        box-sizing: border-box;
+        background-image: url(images/search-icon-png-5.png);
+        background-repeat: no-repeat;
+        background-position: 465px center;
+        background-size: 20px 20px; /* Veľkosť ikony */
+        border-radius: 20px;
+    }
 
-.header__search--input {
-    padding: 10px 40px 10px 10px;
-    width: 500px; 
-    box-sizing: border-box;
-    background-image: url(images/search-icon-png-5.png);
-    background-repeat: no-repeat;
-    background-position: 465px center;
-    background-size: 20px 20px; /* Veľkosť ikony */
-    border-radius: 20px;
-}
+    .nav__search-bar {
+        display: none;
+    }
 
-.nav__search-bar {
-    display: none;
-}
+    .header__personal {
+        padding-right: 50px;
+    }
 
-.header__personal {
-    padding-right: 50px;
-}
+    .header__personal i {
+        padding-right: 15px;
+        color: rgb(75, 147, 147);
+    }
 
-.header__personal i {
-    padding-right: 15px;
-    color: rgb(75, 147, 147);
-}
+    .header__personal a {
+        padding-right: 40px;
+    }
 
-.header__personal a {
-    padding-right: 40px;
-}
+    .header__personal a:hover {
+        color: #4b9393;
+    }
 
-.header__personal a:hover {
-    color: #4b9393;
-}
-
-.header__personal a:active {
-    color: rgb(75, 147, 147);
-}
-
-
-
-/* Navigácia */
-.nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(16, 21, 21, 0.956);
-    transition: background-color 0.3s ease;
-    font-weight: 700;
-    height: 54px;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    z-index: 100; /* Zabezpečuje, aby bol element nad obsahom */
-}
-
-
-.menu {
-    display: none;
-}
-
-.nav__text--active {
-    color: #4b9393;
-}
-
-.nav__text:hover,
-.nav__text:active,
-.nav-cart a:hover,
-.nav-cart a:active {
-    color: #4b9393;
-}
-
-.menu__checkbox {
-    display: none;
-}
-
-.menu__toggler {
-    display: none;
-}
+    .header__personal a:active {
+        color: rgb(75, 147, 147);
+    }
 
 
 
-/*slide*/ 
-.glide {
-    width: 100%;
-}
+    /* Navigácia */
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(16, 21, 21, 0.956);
+        transition: background-color 0.3s ease;
+        font-weight: 700;
+        height: 54px;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        z-index: 100; /* Zabezpečuje, aby bol element nad obsahom */
+    }
 
-.glide__slides li {
-    padding: 0;
-    position: relative;
-    display: inline-block;
-}
+    .menu {
+        display: none;
+    }
 
-.glide__slides {
-    display: flex; /* Použiť flexbox na zarovnanie obrázkov */
-}
+    .nav__text--active {
+        color: #4b9393;
+    }
 
-.glide__slide {
-    width: 100%; /* Obrázky budú mať šírku 100% */
-    box-sizing: border-box; /* Zahrnúť hrúbku ohraničenia a výplň v šírke */
-}
+    .nav__text:hover,
+    .nav__text:active,
+    .nav-cart a:hover,
+    .nav-cart a:active {
+        color: #4b9393;
+    }
 
-.image-text {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    opacity: .8;
-}
+    .menu__checkbox {
+        display: none;
+    }
 
-
-/* Akcia */
-.action__heading {
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 25px;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.action {
-    display: flex;
-    gap: 40px;
-    margin: 0 40px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.actions-row {
-    display: flex;
-    justify-content: space-evenly; 
-}
-
-.image {
-    height: 200px;
-	border-radius: 5px 5px 0 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
-}
-
-.image:hover {
-    transform: scale(1.1);
-}
-
-.card {
-	flex: 0 0 calc((100% - 90px) / 4);
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    padding: 20px;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card__title,
-.card__prize {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.card__button-wrapper{
-    display: flex;
-    margin: 18px 20px;
-}
-
-.btn {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 24px;
-    font-size: 12px;
-    font-size: 0.8rem;  
-    letter-spacing: 2px;  
-    cursor: pointer;
-    text-decoration: none;
-}
-  
-.btn,
-.btn {
-    margin-left: 10px;
-}
-  
-.btn--outline {
-    background: transparent;
-    color: #4b9393;
-    border: 1px solid #4b9393;
-    transition: all .3s ease;
-}
-  
-.btn--outline:hover{
-    transform: scale(1.125);
-    color: #4b9393;
-    border-color: #4b9393;
-    transition: all .3s ease;  
-}
-  
-.btn--fill {
-    background: #4b9393;
-    color: rgba(255,255,255,0.95);
-    filter: drop-shadow(0);
-    font-weight: bold;
-    transition: all .3s ease; 
-}
-  
-.btn--fill:hover{
-    background-color: #78b6b6;
-    transform: scale(1.125);  
-    border-color: rgba(255, 255, 255, 0.9);
-    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
-    transition: all .3s ease;    
-}
-
-
-.card i {
-    color: black;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 24px;
-}
-
-.card i:hover {
-    color: rgb(75, 147, 147);
-}
+    .menu__toggler {
+        display: none;
+    }
 
 
 
+    /*slide*/ 
+    .glide {
+        width: 100%;
+    }
 
-/*lets play*/
-.lets-play {
-    margin-top: 80px;
-    text-align: center;
-}
+    .glide__slides li {
+        padding: 0;
+        position: relative;
+        display: inline-block;
+    }
 
-.play {
-    display: flex;
-    gap: 30px;
-    margin: auto;
-    justify-content: space-evenly;
-    padding-bottom: 80px;
-}
+    .glide__slides {
+        display: flex; /* Použiť flexbox na zarovnanie obrázkov */
+    }
 
-.video {
-    display: flex;
-    flex-direction: column;
-	background-color: #ededec;
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    max-width: 360px;
-    height: 480px;
-    overflow: hidden;
-}
+    .glide__slide {
+        width: 100%; /* Obrázky budú mať šírku 100% */
+        box-sizing: border-box; /* Zahrnúť hrúbku ohraničenia a výplň v šírke */
+    }
 
-
-.video__iframe {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.video__iframe:hover {
-    transform: scale(1.1); /* Priblíženie na 110% */
-}
-
-.video__title {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.video__description,
-.video__company {
-    text-align: center;
-}
+    .image-text {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        opacity: .8;
+    }
 
 
 
-/* Footer */
-.prefooter {
-    background-color: #202626;
-    color: white;
-    font-size: 15px;
-    height: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    /* Akcia */
+    .action__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        font-weight: 700;
+    }
 
-.prefooter__information {
-    display: flex;
-}
+    .action {
+        display: flex;
+        gap: 40px;
+        margin: 0 40px;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
-.prefooter__heading {
-    color: #4b9393;
-}
+    .actions-row {
+        display: flex;
+        justify-content: space-evenly; 
+    }
 
-.prefooter__link {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    font-size: 15px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-}
+    .image {
+        height: 200px;
+        border-radius: 5px 5px 0 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
 
-.prefooter__adress,
-.prefooter__text {
-    margin-bottom: 20px;
-}
+    .image:hover {
+        transform: scale(1.1);
+    }
 
-.prefooter__map {
-    width: 450px;
-    height: 180px;
-    margin-top: 10px;
+    .card {
+        flex: 0 0 calc((100% - 90px) / 4);
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        padding: 20px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .card__title,
+    .card__prize {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card__button-wrapper{
+        display: flex;
+        margin: 18px 20px;
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        cursor: pointer;
+        text-decoration: none;
+    }
     
-}
+    .btn,
+    .btn {
+        margin-left: 10px;
+    }
+    
+    .btn--outline {
+        background: transparent;
+        color: #4b9393;
+        border: 1px solid #4b9393;
+        transition: all .3s ease;
+    }
+    
+    .btn--outline:hover{
+        transform: scale(1.125);
+        color: #4b9393;
+        border-color: #4b9393;
+        transition: all .3s ease;  
+    }
+    
+    .btn--fill {
+        background: #4b9393;
+        color: rgba(255,255,255,0.95);
+        filter: drop-shadow(0);
+        font-weight: bold;
+        transition: all .3s ease; 
+    }
+    
+    .btn--fill:hover{
+        background-color: #78b6b6;
+        transform: scale(1.125);  
+        border-color: rgba(255, 255, 255, 0.9);
+        filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+        transition: all .3s ease;    
+    }
 
-.prefooter__left-column,
-.prefooter__right-column {
-    padding-left: 170px;
-    margin-bottom: 20px;
-}
+    .card i {
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .card i:hover {
+        color: rgb(75, 147, 147);
+    }
+
+
+
+    /*lets play*/
+    .lets-play {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .play {
+        display: flex;
+        gap: 30px;
+        margin: auto;
+        justify-content: space-evenly;
+        padding-bottom: 80px;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        background-color: #ededec;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        max-width: 360px;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    .video__iframe {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .video__iframe:hover {
+        transform: scale(1.1); /* Priblíženie na 110% */
+    }
+
+    .video__title {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .video__description,
+    .video__company {
+        text-align: center;
+    }
+
+
+
+    /* Footer */
+    .prefooter {
+        background-color: #202626;
+        color: white;
+        font-size: 15px;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prefooter__information {
+        display: flex;
+    }
+
+    .prefooter__heading {
+        color: #4b9393;
+    }
+
+    .prefooter__link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    .prefooter__adress,
+    .prefooter__text {
+        margin-bottom: 20px;
+    }
+
+    .prefooter__map {
+        width: 450px;
+        height: 180px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .prefooter__left-column,
+    .prefooter__right-column {
+        padding-left: 170px;
+        margin-bottom: 20px;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        border-top: #fff;
+        background-color: rgba(16, 21, 21, 0.956);
+        color: #fff;
+        align-items: center;
+    }
+
+    .footer__icon {
+        margin-left: 30px;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .footer__icon:hover {
+        color:#4b9393
+    }
+
+    .footer__nav--text {
+        margin-right: 30px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .footer__nav--text:hover {
+        color: #4b9393;
+    }
+
+    .left-corner__icon {
+        color: #4b9393;
+        padding-left: 100px;
+        padding-top: 40px;
+        margin-right: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*Login*/
+    /*Prihlásenie*/
+    .account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .account__card {
+        width: 500px;
+        height: 450px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center; 
+        margin-bottom: 80px;
+    }
+
+    .account__input {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .account__heading {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .account__form {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .account__fieldset {
+        margin-bottom: 20px;
+    }
+
+    .account__input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .account__label {
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    .account__input-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .account__password-container {
+        position: relative;
+    }
+
+    .account__password-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .btn--login {
+        margin-top: 20px;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+
+
+
+   
+
   
-.footer {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    border-top: #fff;
-    background-color: rgba(16, 21, 21, 0.956);
-    color: #fff;
-    align-items: center;
-}
 
-.footer__icon {
-    margin-left: 30px;
-    font-size: 22px;
-    color: #fff;
-}
+  
 
-.footer__icon:hover {
-    color:#4b9393
-}
 
-.footer__nav--text {
-    margin-right: 30px;
-    text-decoration: none;
-    color: #fff;
-}
 
-.footer__nav--text:hover {
-    color: #4b9393;
-}
 
-.left-corner__icon {
-    color: #4b9393;
-    padding-left: 100px;
-    padding-top: 40px;
-    margin-right: 10px;
-}
+
+
+
+
+
+
+
+
+    /*games*/
+    .wrap {
+        display: flex;
+    }
+
+    .games {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
 
 
 
@@ -428,528 +560,613 @@ a {
 
 
 
+    /* select-console */
+
+    .platforms {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        gap: 30px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 80px;
+        color: #333;
+        width: 80px;
+        padding-top: 50px;
+    }
+
+    .games-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .platform {
+        flex: 0 0 calc(100% / 4);
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        margin: 10px;
+        text-align: center;
+        width: 320px;
+    }
+        
+    .platform:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
+    }
+
+    .platform__icon {
+        padding: 50px 0;
+        color: #4b9393;
+    }
+
+    .platform__name{
+        margin-bottom: 40px;
+    }
+
+    .platform__link {
+        text-decoration: none;
+        color: #202626;
+    }
 
 
-/*Login*/
-/*Prihlásenie*/
-.account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
 
-.account__card {
-    width: 500px;
-    height: 450px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center; 
-    margin-bottom: 80px;
-}
 
-.account__input {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-}
 
-.account__heading {
-    font-size: 20px;
-    margin-top: 50px;
-}
 
-.account__form {
-    margin-top: 20px;
-    text-align: center;
-}
 
-.account__fieldset {
-    margin-bottom: 20px;
-}
 
-.account__input-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 
-}
 
-.account__label {
-    white-space: nowrap;
+
+
+
+
+
+    /*genres*/
+
+    .genre__item--type  {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        width: 200px;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+    }
+
+    .genre {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px; /* Medzera medzi položkami */
+        margin: 30px 20px 80px 20px; 
+    }
+
+    .genre__item {
+        width: calc(33.33% - 10px); /* Šírka 50% s odstupom medzi položkami */
+        box-sizing: border-box;
+        border: 1px solid #ddd; /* Rám okolo položiek */
+        padding: 10px; /* Odsadenie vnútri položiek */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+        border-radius: 20px;  
+    }
+
+    .genre div:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 4px rgba(149, 144, 139, 0.708);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*accessories*/
+
+    .main-accessory {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .accessories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom {
+        margin-top: 50px;
+    }
+
+    .specific-accessory {
+        flex: 0 0 calc(100% / 4);
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        margin: 10px;
+        text-align: center;
+        width: 200px;
+    }
+        
+    .specific-accessory:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
+    }
+
+    .specific-accessory i {
+        padding: 50px 0;
+        color: #4b9393;
+    }
+
+    .specific-accessory p {
+        margin-bottom: 40px;
+    }
+
+    .specific-accessory a {
+        text-decoration: none;
+        color: #202626;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* consoles*/
+    .consoles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .console {
+        width: 400px;
+    }
+    .main-console {
+        display: flex;
+        justify-content: center;
+    }
+
+    .last {
+        margin-bottom: 80px;
+    }
+
+    .console__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /*game*/
+    .two-columns {
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+
+    .two-columns__first-column {
+        flex: 1;
+    }
+
+    .second-column {
+        flex: 2;
+        padding: 0 20px; 
+        margin-top: 27px;
+        display: flex;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .solo-card__image {
+        height: 300px;
+    }
+
+    .solo-card {
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .second-column__card--one {
+        height: 400px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        padding: 20px;
+        width: 450px;
+    }
+
+    .second-column__header {
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0 10px; 
+    }
+
+    .column__prize {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .column__line-through {
+        text-decoration: line-through;
+        color: #848a8a;
+    }
+
+    .column__last-prize {
+        font-size: 30px;
+    }
+
+    .column__availability {
+        font-weight: 700;
+    }
+
+    .column__availability-label {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-game {
+        display: inline-block;
+        transition: all .3s ease; 
+        padding-top: 37px;
+    }
+
+    .btn-game:hover {
+        transform: scale(1.125);  
+        border-color: rgba(255, 255, 255, 0.9);
+        filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+        transition: all .3s ease;   
+    }
+
+    .btn-game a {
+        padding: 15px 50px;
+    }
+
+    .video-trailer {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .video-trailer__iframe {
+        width: 930px;
+        height: 400px;
+        display: inline-block;
+    }
+
+    .second-half {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        padding: 20px;
+        margin: 60px 60px 80px 60px;
+        gap: 60px;
+    }
+
+    .game-description {
+        margin-top: 60px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+        padding: 20px;
+        line-height: 1.6; /* Riadkovanie textu */
+    }
+
+    .game-description_title {
+        text-align: center;
+        border-bottom: 2px solid #9f9f9f; /* Horizontálny oddeľovač pod nadpisom */
+        padding-bottom: 10px; /* Odsadenie pod nadpisom */
+        margin-bottom: 20px; /* Odsadenie od obsahu */
+        font-size: 30px;
+    }
+
+    .game-parameters {
+        margin: auto;
+        margin-right: 40px;
+    }
+
+
+    .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .details-table__data {
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .details-table__header {
+        background-color: #4b93932a;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+    /* cart */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-order__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .form-field {
+        margin: auto;
+        width: 500px; /* Zmena šírky políčka */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .form-order__heading {
+        margin-top: 100px;
+    }
+
+    .cart-product,
+    .cart-prize,
+    .cart-name,
+    .cart-surname,
+    .cart-number,
+    .cart-email,
+    .cart-adress,
+    .cart-city,
+    .cart-psc {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px; 
+        justify-content: space-between;
+    }
+
+    .cart-product__input {
+        width: 300px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-prize__input {
+        width: 100px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-name__input {
+        width: 100px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-surname__input {    
+        width: 200px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-number__input {
+        width: 200px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-email__input {
+        width: 300px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-adress__input {
+        width: 400px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-city__input {
+        width: 300px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .cart-psc__input {
+        width: 150px;
+        padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+
+    .form-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .radio-item {
+        display: flex;
+        display: flex;
+        align-items: center;  
+    }
+
+    .radio-check {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px; 
+        justify-content: space-between;
+        white-space: nowrap;
+    }
+
+    .form-checkbox {
+        display: inline;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    .form-checkbox__label {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .form-checkbox__input {
+        margin-top: 1px;
+    }
+
+    .radio-check__input {
     margin-bottom: 10px;
-}
+    }
 
-.account__input-field {
-    margin-bottom: 20px;
-    text-align: center; 
-    margin-left: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-
-
-.account__password-container {
-    position: relative;
-}
-
-.account__password-field {
-    margin-bottom: 20px;
-    text-align: center; 
-    margin-left: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.btn--login {
-    margin-top: 20px;
-}
-
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-}
-
-
-
-
-   
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-/*gamesall*/
-.wrap {
-    display: flex;
-}
-
-.games {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* games 2 */
-
-.platforms {
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    gap: 30px;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.icon {
-    font-size: 80px;
-    color: #333;
-    width: 80px;
-    padding-top: 50px;
-}
-
-.games-section {
-    display: flex;
-    justify-content: center;
-}
-
-.platform {
-    flex: 0 0 calc(100% / 4);
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    margin: 10px;
-    text-align: center;
-    width: 320px;
-}
+    .radio-info {
+        margin-left: 300px;
+        margin-top: 20px;
+        white-space: nowrap;
+    }
     
-.platform:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
-}
-
-.platform__icon {
-    padding: 50px 0;
-    color: #4b9393;
-}
-
-.platform__name{
-    margin-bottom: 40px;
-}
-
-.platform__link {
-    text-decoration: none;
-    color: #202626;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*games*/
-
-.genre__item--type  {
-    background-color: #ffffff;
-	border-radius: 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    width: 200px;
-    text-decoration: none;
-    color: #333; /* Farba textu */
-    font-weight: bold; /* Tučné písmo */
-}
-
-.genre {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 10px; /* Medzera medzi položkami */
-    margin: 30px 20px 80px 20px; 
-}
-
-.genre__item {
-    width: calc(33.33% - 10px); /* Šírka 50% s odstupom medzi položkami */
-    box-sizing: border-box;
-    border: 1px solid #ddd; /* Rám okolo položiek */
-    padding: 10px; /* Odsadenie vnútri položiek */
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: transform 0.3s;
-    text-decoration: none;
-    color: #333; /* Farba textu */
-    font-weight: bold; /* Tučné písmo */
-    border-radius: 20px;  
-}
-
-.genre div:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(149, 144, 139, 0.708);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*accessories*/
-
-.main-accessory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.accessories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.bottom {
-    margin-top: 50px;
-}
-
-.specific-accessory {
-    flex: 0 0 calc(100% / 4);
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    margin: 10px;
-    text-align: center;
-    width: 200px;
-}
-    
-.specific-accessory:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
-}
-
-.specific-accessory i {
-    padding: 50px 0;
-    color: #4b9393;
-}
-
-.specific-accessory p {
-    margin-bottom: 40px;
-}
-
-.specific-accessory a {
-    text-decoration: none;
-    color: #202626;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* consoles*/
-.consoles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-}
-
-.console {
-    width: 400px;
-   
-}
-.main-console {
-    display: flex;
-    justify-content: center;
-}
-
-.last {
-    margin-bottom: 80px;
-    
-}
-
-
-.console__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*game one*/
-.two-columns {
-    display: flex;
-    margin: auto;
-    justify-content: space-evenly;
-    gap: 50px;
-}
-
-.two-columns__first-column {
-    flex: 1;
-}
-
-.second-column {
-    flex: 2;
-    padding: 0 20px; 
-    margin-top: 27px;
-    display: flex;
-    justify-items: center;
-    gap: 20px;
-}
-
-.solo-card__image {
-    height: 300px;
-}
-
-.solo-card {
-    height: 400px;
-}
-
-.second-column__card--one {
-    height: 400px;
-    width: 100%;
-    background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    padding: 20px;
-    width: 450px;
-}
-
-.second-column__header {
-    font-size: 30px;
-}
-
-.columns {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-    padding: 0 10px; 
-}
-
-.column__prize {
-    text-align: left;
-    padding-left: 20px;
-}
+    .required {
+        color: red
+    }
 
-.column__line-through {
-    text-decoration: line-through;
-    color: #848a8a;
-}
-
-.column__last-prize {
-    font-size: 30px;
-}
+    .form-field__notes {
+        margin-top: 30px;
+    }
 
-.column__availability {
-    font-weight: 700;
-}
+    .form-field__textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Border radius 20px */
+    }
 
-.column__availability-label {
-    text-align: center;
-    margin-top: 20px;
-}
+    .checkbox__button-wrapper{
+        display: flex;
+        margin: 60px;
+        
+        justify-content: center;
+    }
 
-.btn-game {
-    display: inline-block;
-    transition: all .3s ease; 
 }
 
-.btn-game:hover {
-    transform: scale(1.125);  
-    border-color: rgba(255, 255, 255, 0.9);
-    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
-    transition: all .3s ease;   
-}
 
-.btn-game a {
-    padding: 15px 50px;
-}
 
-.video-trailer {
-    margin-top: 60px;
-    text-align: center;
-}
 
-.video-trailer__iframe {
-    width: 930px;
-    height: 400px;
-    display: inline-block;
-}
 
-.second-half {
-    display: flex;
-    background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    padding: 20px;
-    margin: 60px 60px 80px 60px;
-    gap: 60px;
-}
 
-.game-description {
-    margin-top: 60px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    padding: 20px;
-    line-height: 1.6; /* Riadkovanie textu */
-}
 
-.game-description_title {
-    text-align: center;
-    border-bottom: 2px solid #9f9f9f; /* Horizontálny oddeľovač pod nadpisom */
-    padding-bottom: 10px; /* Odsadenie pod nadpisom */
-    margin-bottom: 20px; /* Odsadenie od obsahu */
-    font-size: 30px;
-}
 
-.game-parameters {
-    margin: auto;
-    margin-right: 40px;
-}
 
 
-.details-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
 
-.details-table__data {
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 20px;
-}
 
-.details-table__header {
-    background-color: #4b93932a;
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 20px;
-}
 
 
 
@@ -959,230 +1176,1284 @@ a {
 
 
 
-/* cart */
-main {
-    display: flex;
-    flex-direction: column;
-}
 
-.form-order__heading {
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 25px;
-    font-size: 30px;
-    font-weight: 700;
-}
 
-.form-field {
-    margin: auto;
-    width: 500px; /* Zmena šírky políčka */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 20px;
-    gap: 10px;
-}
 
 
-.form-order__heading {
-    margin-top: 100px;
-}
 
-.cart-product,
-.cart-prize,
-.cart-name,
-.cart-surname,
-.cart-number,
-.cart-email,
-.cart-adress,
-.cart-city,
-.cart-psc {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px; 
-    justify-content: space-between;
-}
 
-.cart-product__input {
-    width: 300px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-prize__input {
-    width: 100px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-name__input {
-    width: 100px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-surname__input {    
-    width: 200px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-number__input {
-    width: 200px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-email__input {
-    width: 300px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-adress__input {
-    width: 400px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-city__input {
-    width: 300px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.cart-psc__input {
-    width: 150px;
-    padding: 10px;
-margin-top: 10px;
-border: 1px solid #ccc;
-border-radius: 20px;
-box-sizing: border-box;
-}
 
-.form-radio {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 20px;
-}
 
-.radio-item {
-    display: flex;
-    display: flex;
-    align-items: center;  
-}
 
-.radio-check {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px; 
-    justify-content: space-between;
-    white-space: nowrap;
-}
 
-.form-checkbox {
-    /*display: flex;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    white-space: nowrap;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px; */
-    
-   
-}
 
 
 
 
-.form-checkbox {
-    display: inline;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    gap: 20px;
-}
 
-.form-checkbox__label {
-    text-align: center;
-    margin-bottom: 5px;
-}
 
-.form-checkbox__input {
-    margin-top: 1px;
-}
 
-.radio-check__input {
-  margin-bottom: 10px;
-}
 
-.radio-info {
-    margin-left: 300px;
-    margin-top: 20px;
-    white-space: nowrap;
-}
-  
-.required {
-    color: red
-}
 
-.form-field__notes {
-    margin-top: 30px;
-}
 
 
-.form-field__textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Border radius 20px */
-}
 
-.checkbox__button-wrapper{
-    display: flex;
-    margin: 60px;
-    
-    justify-content: center;
-}
 
-}
 
 @media screen and (min-width: 640px) and (max-width:1100px) {
+        
+    .header {
+        height: 85px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .header__logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .fa-solid {
+        color: white;
+    }
+
+    .nav__text {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
+
+    .header__search--input {
+        padding: 10px 40px 10px 10px;
+        width: 70%; 
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: 465px center;
+        background-size: 20px 20px; /* Veľkosť ikony */
+        border-radius: 20px;
+    }
+
+    .header__search-bar {
+        width: 100%;
+    }
+
+    .header__personal {
+        white-space: nowrap;
+    }
+
+    .header__personal i {
+        padding-right: 15px;
+        color: rgb(75, 147, 147);
+    }
+
+    .header__personal a {
+        padding-right: 40px;
+    }
+
+    .header__personal {
+        margin-right: 30px;
+    }
+
+    .header__personal-icon {
+        color: rgb(75, 147, 147); 
+        font-size: 18px;
+    }
+
+    .header__personal-icon--last,
+    .nav__text--hidden {
+        display: none;
+    }
+
+    .header__personal a:active {
+        color: rgb(75, 147, 147);
+    }
+
+
+
+
+    /* Navigácia */
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(16, 21, 21, 0.956);
+        transition: background-color 0.3s ease;
+        font-weight: 700;
+        height: 54px;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        z-index: 100; /* Zabezpečuje, aby bol element nad obsahom */
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav__text--active {
+        color: #4b9393;
+    }
+
+    .nav__text:hover,
+    .nav__text:active,
+    .nav-cart a:hover,
+    .nav-cart a:active {
+        color: #4b9393;
+    }
+
+    .menu__checkbox {
+        display: none;
+    }
+
+    .menu__toggler {
+        display: none;
+    }
+
+
+
+    /*slide*/ 
+    .glide {
+        width: 100%;
+    }
+
+    .glide__slides li {
+        padding: 0;
+        position: relative;
+        display: inline-block;
+    }
+
+    .glide__slides {
+        display: flex; /* Použiť flexbox na zarovnanie obrázkov */
+    }
+
+    .glide__slide {
+        width: 100%; /* Obrázky budú mať šírku 100% */
+        box-sizing: border-box; /* Zahrnúť hrúbku ohraničenia a výplň v šírke */
+    }
+
+    .image-text {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        opacity: .8;
+    }
+
+
+
+
+
+
+
+
+
+    /* Akcia */
+    .action__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .action {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 0 40px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .actions-row {
+        display: flex;
+        justify-content: space-evenly; 
+        flex-wrap: wrap;
+    }
+
+    .image {
+        height: 200px;
+        border-radius: 5px 5px 0 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card__title,
+    .card__prize {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card__button-wrapper{
+        display: flex;
+        margin: 18px 20px;
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .btn,
+    .btn {
+        margin-left: 10px;
+    }
+    
+    .btn--outline {
+        background: transparent;
+        color: #4b9393;
+        border: 1px solid #4b9393;
+    }
+    
+    .btn--fill {
+        background: #4b9393;
+        color: rgba(255,255,255,0.95);
+        filter: drop-shadow(0);
+        font-weight: bold;
+    }
+
+    .card i {
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /*lets play*/
+    .lets-play {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .play {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        padding-bottom: 80px;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        background-color: #ededec;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        max-width: 360px;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    .video__iframe {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video__title {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .video__description,
+    .video__company {
+        text-align: center;
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Footer */
+    .prefooter {
+        background-color: #202626;
+        color: white;
+        font-size: 15px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .prefooter__information {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prefooter__heading {
+        color: #4b9393;
+        margin-top: 30px;
+    }
+
+    .prefooter__link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    .prefooter__adress,
+    .prefooter__text {
+        margin-bottom: 20px;
+    }
+
+    .prefooter__map {
+        width: 100%;
+        height: 300px;
+        
+    }
+
+    .prefooter__left-column,
+    .prefooter__right-column {
+        
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-top: #fff;
+        background-color: rgba(16, 21, 21, 0.956);
+        color: #fff;
+        align-items: center;
+    }
+
+    .footer__icon {
+        font-size: 22px;
+        color: #4b9393;
+        margin-right: 20px;
+    }
+
+    .footer-icons {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .footer__nav {
+        margin-bottom: 40px;
+    }
+
+    .footer__nav--text {
+        text-decoration: none;
+        color: #fff;
+        font-size: 11px;
+        margin-right: 20px;
+    }
+
+    .footer__nav--text-first {
+        margin-left: 10px;
+    }
+
+
+    .left-corner__icon {
+        color: #4b9393;
+        padding-left: 20px;
+        padding-top: 40px;
+        margin-right: 10px;
+    }
+
+    .left-corner {
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    /*select-console*/
+    .platforms {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .icon {
+        font-size: 80px;
+        color: #333;
+        width: 80px;
+        padding-top: 50px;
+    }
+
+    .games-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .platform {
+        flex: 0 0 calc(100% / 4);
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        margin: 10px;
+        text-align: center;
+        min-width: 320px;
+    }
+
+    .platform__icon {
+        padding: 50px 0;
+        color: #4b9393;
+    }
+
+    .platform__name{
+        margin-bottom: 40px;
+    }
+
+    .platform__link {
+        text-decoration: none;
+        color: #202626;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /*genres*/
+
+    .genre__item--type  {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(33, 37, 36, 0.15);
+        text-align: center;
+        width: 200px;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+    }
+
+    .genre {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 30px 20px 80px 20px; 
+        justify-content: center;
+    }
+
+    .genre__item {
+        width: 200px;
+        box-sizing: border-box;
+        border: 1px solid #ddd; /* Rám okolo položiek */
+        padding: 10px; /* Odsadenie vnútri položiek */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+        border-radius: 20px;  
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /*games*/
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .games {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    /*game*/
+    .two-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        gap: 50px;
+    }
+
+    .two-columns__first-column {
+        flex: 1;
+    }
+
+    .second-column {
+        padding: 0 20px; 
+        margin-top: 27px;
+        justify-items: center;
+    }
+
+    .solo-card__image {
+        height: 300px;
+    }
+
+    .solo-card {
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 450px;
+    }
+
+    .second-column__card--one {
+        height: 400px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 20px;
+        width: 450px;
+    }   
+
+    .second-column__header {
+        font-size: 30px;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0 10px;
+        margin-top: 20px; 
+    }
+
+    .column__prize {
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    .column__line-through {
+        text-decoration: line-through;
+        color: #848a8a;
+    }
+
+    .column__last-prize {
+        font-size: 30px;
+    }
+
+    .column__availability {
+        font-weight: 700;
+    }
+
+    .column__availability-label {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .btn-game {
+        display: inline-block;
+        margin-top: 60px;
+    }
+
+    .btn-game a {
+        padding: 15px 50px;
+    }
+
+    .video-trailer {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .video-trailer__iframe {
+        width: 90%;
+        height: 300px;
+        display: inline-block;
+    }
+
+    .second-half {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        margin: 60px 60px 80px 60px;
+        gap: 60px;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+    .game-description {
+        margin-top: 60px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        padding: 20px;
+        line-height: 1.6; /* Riadkovanie textu */
+    }
+
+    .game-description_title {
+        text-align: center;
+        border-bottom: 2px solid #9f9f9f; /* Horizontálny oddeľovač pod nadpisom */
+        padding-bottom: 10px; /* Odsadenie pod nadpisom */
+        margin-bottom: 20px; /* Odsadenie od obsahu */
+        font-size: 30px;
+    }
+
+    .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .details-table__data {
+        border-bottom: 1px solid #dddddd;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .details-table__header {
+        background-color: #4b93932a;
+        border-bottom: 1px solid #dddddd;
+        text-align: center;
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    /* cart */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-order__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .form-field {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .from-order {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-order__heading {
+        margin-top: 100px;
+    }
+
+    .cart-product,
+    .cart-prize,
+    .cart-name,
+    .cart-surname,
+    .cart-number,
+    .cart-email,
+    .cart-adress,
+    .cart-city,
+    .cart-psc {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px; 
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .cart-product__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-product__label {
+        margin-left: 20px;
+    }
+
+    .cart-prize__input {
+        width: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-prize__label {
+        margin-left: 20px;
+    }
+
+    .cart-name__input {
+        width: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-name__label {
+        margin-left: 20px;
+    }
+
+    .cart-surname__input {    
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-surname__label {
+        margin-left: 20px;
+    }
+
+    .cart-number__input {
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-number__label {
+        margin-left: 20px;
+    }
+
+    .cart-email__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-email__label {
+        margin-left: 20px;
+    }
+
+    .cart-adress__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-adress__label {
+        margin-left: 20px;
+    }
+
+    .cart-city__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-city__label {
+        margin-left: 20px;
+    }
+
+    .cart-psc__input {
+        width: 150px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-psc__label {
+        margin-left: 20px;
+    }
+
+    .form-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    .radio-item {
+        display: flex;
+        align-items: center;  
+    }
+
+    .radio-check {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        display: inline;
+        margin-top: 30px; 
+        justify-content: space-between;
+        white-space: nowrap;
+    }
+
+    .form-checkbox {
+        display: inline;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .radio-ceck__label {
+        text-align: center;
+    }
+
+    .radio-check__input {
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    }
+
+    .radio-info {
+        margin-left: 300px;
+        margin-top: 20px;
+        white-space: nowrap;
+    }
+    
+    .required {
+        color: red
+    }
+
+    .form-field__notes {
+        margin-top: 30px;
+    }
+
+    .form-field__textarea {
+        padding: 15px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Border radius 20px */
+        margin: 20px;
+        width: 75%;
+    
+    }
+
+    .checkbox__button-wrapper{
+        display: flex;
+        margin: 18px 20px;
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .btn,
+    .btn {
+        margin-left: 10px;
+    }
+    
+    .btn--outline {
+        background: transparent;
+        color: #4b9393;
+        border: 1px solid #4b9393;
+    }
+
+    .btn--fill {
+        background: #4b9393;
+        color: rgba(255,255,255,0.95);
+        filter: drop-shadow(0);
+        font-weight: bold;
+    }
+
+    .checkbox__button-wrapper{
+        display: flex;
+        margin: 60px;
+        
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /*Login*/
+    /*Prihlásenie*/
+    .account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .account__card {
+        width: 75%;
+        height: 450px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center; 
+        margin-bottom: 80px;
+    }
+
+    .account__input {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        
+    }
+
+    .account__heading {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .account__form {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .account__fieldset {
+        margin-bottom: 20px;
+    }
+
+    .account__input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .account__label {
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    .account__input-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+
+    .account__password-container {
+        position: relative;
+    }
+
+    .account__password-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .btn--login {
+        margin-top: 20px;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+
+
+
+
+
+
+
+    
+
+    /* consoles*/
+    .consoles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .console {
+        width: 400px;
+    
+    }
+    .main-console {
+        display: flex;
+        justify-content: center;
+    }
+
+    .last {
+        margin-bottom: 80px;
+        
+    }
+
+
+    .console__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1205,8 +2476,6 @@ box-sizing: border-box;
         margin-left: 10px;
     }
 
-   
-
     .header__search-bar {
         display: none;
     }
@@ -1224,12 +2493,9 @@ box-sizing: border-box;
         display: none;
     }
 
-   
     .nav__text--hidden {
         display: none;
         }
-
-
 
     .menu__checkbox {
         position: absolute;
@@ -1272,7 +2538,6 @@ box-sizing: border-box;
 
     .menu__toggler {
         margin-right: 30px;
-       
     }
 
     .menu__checkbox:checked ~ .nav__search-bar {
@@ -1284,7 +2549,6 @@ box-sizing: border-box;
         margin: 20px;
         padding: 0;
         list-style: none;
-        
     }
 
     .menu__item {
@@ -1312,7 +2576,6 @@ box-sizing: border-box;
         padding: 5px 40px 5px 10px;
         width: 100%;
         box-sizing: border-box;
-        background-image: url(images/search-icon-png-5.png);
         background-repeat: no-repeat;
         background-position: 465px center;
         background-size: 20px 20px; /* Veľkosť ikony */
@@ -1341,9 +2604,7 @@ box-sizing: border-box;
 
     .glide {
         width: 100%;
-      
     }
-
 
     .glide__slides li {
         padding: 0;
@@ -1374,1071 +2635,101 @@ box-sizing: border-box;
 
 
 
+        
+    /* Akcia */
+    .action__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .action {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .actions-row {
+        display: flex;
+        justify-content: space-evenly; 
+    }
+
+    .image {
+        height: 200px;
+        border-radius: 5px 5px 0 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+
+    .image:hover {
+        transform: scale(1.1);
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+
+    .card__title,
+    .card__prize {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card__button-wrapper{
+        display: flex;
+        margin: 18px 20px;
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        cursor: pointer;
+        text-decoration: none;
+    }
     
-/* Akcia */
-.action__heading {
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 25px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.action {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.actions-row {
-    display: flex;
-    justify-content: space-evenly; 
-}
-
-.image {
-    height: 200px;
-	border-radius: 5px 5px 0 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
-}
-
-.image:hover {
-    transform: scale(1.1);
-}
-
-.card {
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-
-.card__title,
-.card__prize {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.card__button-wrapper{
-    display: flex;
-    margin: 18px 20px;
-}
-
-.btn {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 24px;
-    font-size: 12px;
-    font-size: 0.8rem;  
-    letter-spacing: 2px;  
-    cursor: pointer;
-    text-decoration: none;
-}
-  
-.btn,
-.btn {
-    margin-left: 10px;
-}
-  
-.btn--outline {
-    background: transparent;
-    color: #4b9393;
-    border: 1px solid #4b9393;
-}
-  
-
-.btn--fill {
-    background: #4b9393;
-    color: rgba(255,255,255,0.95);
-    filter: drop-shadow(0);
-    font-weight: bold;
-}
-  
-
-
-.card i {
-    color: black;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 24px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*lets play*/
-.lets-play {
-    margin-top: 80px;
-    text-align: center;
-}
-
-.play {
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    padding-bottom: 80px;
-}
-
-.video {
-    display: flex;
-    flex-direction: column;
-	background-color: #ededec;
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    max-width: 360px;
-    height: 480px;
-    overflow: hidden;
-}
-
-
-.video__iframe {
-    position: relative;
-    overflow: hidden;
-}
-
-.video__title {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 18px;
-}
-
-.video__description,
-.video__company {
-    text-align: center;
+    .btn,
+    .btn {
+        margin-left: 10px;
+    }
     
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Footer */
-.prefooter {
-    background-color: #202626;
-    color: white;
-    font-size: 15px;
-    height: 100%;
-    align-items: center;
-   
-    
-   
-}
-
-.prefooter__information {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.prefooter__heading {
-    color: #4b9393;
-    margin-top: 30px;
-}
-
-.prefooter__link {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    font-size: 15px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-}
-
-.prefooter__adress,
-.prefooter__text {
-    margin-bottom: 20px;
-}
-
-.prefooter__map {
-    width: 100%;
-    height: 200px;
-    
-}
-
-.prefooter__left-column,
-.prefooter__right-column {
-
-    margin-bottom: 20px;
-    text-align: center;
-}
-  
-.footer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-top: #fff;
-    background-color: rgba(16, 21, 21, 0.956);
-    color: #fff;
-    align-items: center;
-}
-
-.footer__icon {
-    font-size: 22px;
-    color: #4b9393;
-    margin-right: 20px;
-}
-
-.footer-icons {
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-.footer__nav {
-    margin-bottom: 40px;
-}
-
-.footer__nav--text {
-    text-decoration: none;
-    color: #fff;
-    font-size: 11px;
-    margin-right: 20px;
-}
-
-.footer__nav--text-first {
-    margin-left: 10px;
-}
-
-
-.left-corner__icon {
-    color: #4b9393;
-    padding-left: 20px;
-    padding-top: 40px;
-    margin-right: 10px;
-}
-
-.left-corner {
-    margin-top: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*games2*/
-.platforms {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    gap: 30px;
-    align-items: center;
-}
-
-.icon {
-    font-size: 80px;
-    color: #333;
-    width: 80px;
-    padding-top: 50px;
-}
-
-.games-section {
-    display: flex;
-    justify-content: center;
-}
-
-.platform {
-    flex: 0 0 calc(100% / 4);
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s;
-    margin: 10px;
-    text-align: center;
-    width: 320px;
-}
-    
-.platform:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
-}
-
-.platform__icon {
-    padding: 50px 0;
-    color: #4b9393;
-}
-
-.platform__name{
-    margin-bottom: 40px;
-}
-
-.platform__link {
-    text-decoration: none;
-    color: #202626;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*games*/
-
-.genre__item--type  {
-    background-color: #ffffff;
-	border-radius: 20px;
-	box-shadow: 0 2px 4px rgba(33, 37, 36, 0.15);
-    text-align: center;
-    width: 200px;
-    text-decoration: none;
-    color: #333; /* Farba textu */
-    font-weight: bold; /* Tučné písmo */
-}
-
-.genre {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 30px 20px 80px 20px; 
-    align-items: center;
-}
-
-.genre__item {
-    width: 200px;
-    box-sizing: border-box;
-    border: 1px solid #ddd; /* Rám okolo položiek */
-    padding: 10px; /* Odsadenie vnútri položiek */
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: transform 0.3s;
-    text-decoration: none;
-    color: #333; /* Farba textu */
-    font-weight: bold; /* Tučné písmo */
-    border-radius: 20px;  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*gamesall*/
-.wrap {
-    display: flex;
-    
-}
-
-.games {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-bottom: 80px;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*game one*/
-.two-columns {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 50px;
-}
-
-.two-columns__first-column {
-    flex: 1;
-}
-
-.second-column {
-    flex: 2;
-    padding: 0 20px; 
-    margin-top: 27px;
-    display: flex;
-    justify-items: center;
-    gap: 20px;
-}
-
-.solo-card__image {
-    height: 200px;
-}
-
-.solo-card {
-    height: 250px;
-    margin: 0 auto;
-}
-
-.second-column__card--one {
-    height: 400px;
-    width: 100%;
-    background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 20px;
-    width: 450px;
-}
-
-.second-column__header {
-    font-size: 30px;
-}
-
-.columns {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-    padding: 0 10px;
-    margin-top: 20px; 
-}
-
-.column__prize {
-    text-align: center;
-    padding-left: 20px;
-}
-
-.column__line-through {
-    text-decoration: line-through;
-    color: #848a8a;
-}
-
-.column__last-prize {
-    font-size: 30px;
-}
-
-.column__availability {
-    font-weight: 700;
-}
-
-.column__availability-label {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.btn-game {
-    display: inline-block;
-    margin-top: 60px;
-}
-
-.btn-game a {
-    padding: 15px 50px;
-}
-
-.video-trailer {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.video-trailer__iframe {
-    width: 100%;
-    height: 300px;
-    display: inline-block;
-}
-
-.second-half {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-
-
-    padding: 20px;
-    margin: 60px 10px 80px 10px;
-    gap: 60px;
-}
-
-.game-description {
-    margin-top: 60px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    padding: 20px;
-    line-height: 1.6; /* Riadkovanie textu */
-}
-
-.game-description_title {
-    text-align: center;
-    border-bottom: 2px solid #9f9f9f; /* Horizontálny oddeľovač pod nadpisom */
-    padding-bottom: 10px; /* Odsadenie pod nadpisom */
-    margin-bottom: 20px; /* Odsadenie od obsahu */
-    font-size: 30px;
-}
-
-.game-parameters {
-    margin: auto;
-    margin-right: 40px;
-}
-
-
-.details-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.details-table__data {
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 20px;
-}
-
-.details-table__header {
-    background-color: #4b93932a;
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* cart */
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-order__heading {
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 25px;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.form-field {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 20px;
-    gap: 10px;
-    align-items: center;
-}
-
-.from-order {
-    display: flex;
-    justify-content: center;
-}
-
-
-.form-order__heading {
-    margin-top: 100px;
-}
-
-.cart-product,
-.cart-prize,
-.cart-name,
-.cart-surname,
-.cart-number,
-.cart-email,
-.cart-adress,
-.cart-city,
-.cart-psc {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px; 
-    justify-content: space-between;
-    width: 400px;
-}
-
-
-
-.cart-product__input {
-    width: 300px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-product__label {
-    margin-left: 20px;
-}
-
-.cart-prize__input {
-    width: 100px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-
-.cart-prize__label {
-    margin-left: 20px;
-}
-
-.cart-name__input {
-    width: 100px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-name__label {
-    margin-left: 20px;
-}
-
-.cart-surname__input {    
-    width: 200px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-surname__label {
-    margin-left: 20px;
-}
-
-.cart-number__input {
-    width: 200px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-number__label {
-    margin-left: 20px;
-}
-
-.cart-email__input {
-    width: 300px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-email__label {
-    margin-left: 20px;
-}
-
-.cart-adress__input {
-    width: 300px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-adress__label {
-    margin-left: 20px;
-}
-
-.cart-city__input {
-    width: 300px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-city__label {
-    margin-left: 20px;
-}
-
-.cart-psc__input {
-    width: 150px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.cart-psc__label {
-    margin-left: 20px;
-}
-
-.form-radio {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  
-    align-items: center;
-
-    margin-bottom: 20px;
-}
-
-.radio-item {
-    display: flex;
-    align-items: center;  
-}
-
-.radio-check {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    display: inline;
-    margin-top: 30px; 
-    justify-content: space-between;
-    white-space: nowrap;
-}
-
-.form-checkbox {
-    display: inline;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.radio-ceck__label {
-    text-align: center;
-}
-
-.radio-check__input {
-  margin-bottom: 10px;
-  
-  padding: 10px;
- 
-}
-
-.radio-info {
-    margin-left: 300px;
-    margin-top: 20px;
-    white-space: nowrap;
-}
-  
-.required {
-    color: red
-}
-
-.form-field__notes {
-    margin-top: 30px;
-}
-
-
-.form-field__textarea {
-    padding: 15px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Border radius 20px */
-    margin: 20px;
-    width: 75%;
- 
-}
-
-.checkbox__button-wrapper{
-    display: flex;
-    margin: 18px 20px;
-}
-
-.btn {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 24px;
-    font-size: 12px;
-    font-size: 0.8rem;  
-    letter-spacing: 2px;  
-    cursor: pointer;
-    text-decoration: none;
-}
-  
-.btn,
-.btn {
-    margin-left: 10px;
-}
-  
-.btn--outline {
-    background: transparent;
-    color: #4b9393;
-    border: 1px solid #4b9393;
-}
-  
-
-.btn--fill {
-    background: #4b9393;
-    color: rgba(255,255,255,0.95);
-    filter: drop-shadow(0);
-    font-weight: bold;
-}
-
-.checkbox__button-wrapper{
-    display: flex;
-    margin: 60px;
-    
-    justify-content: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Login*/
-/*Prihlásenie*/
-.account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.account__card {
-    width: 75%;
-    height: 450px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    text-align: center; 
-    margin-bottom: 80px;
-}
-
-.account__input {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-    
-}
-
-.account__heading {
-    font-size: 20px;
-    margin-top: 50px;
-}
-
-.account__form {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.account__fieldset {
-    margin-bottom: 20px;
-}
-
-.account__input-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    
-}
-
-.account__label {
-    white-space: nowrap;
-    margin-bottom: 10px;
-}
-
-.account__input-field {
-    margin-bottom: 20px;
-    text-align: center; 
-    margin-left: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-
-.account__password-container {
-    position: relative;
-}
-
-.account__password-field {
-    margin-bottom: 20px;
-    text-align: center; 
-    margin-left: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.btn--login {
-    margin-top: 20px;
-}
-
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* consoles*/
-.consoles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-}
-
-.console {
-    width: 400px;
-   
-}
-.main-console {
-    display: flex;
-    justify-content: center;
-}
-
-.last {
-    margin-bottom: 80px;
-    
-}
-
-
-.console__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-    
+    .btn--outline {
+        background: transparent;
+        color: #4b9393;
+        border: 1px solid #4b9393;
+    }
     
 
+    .btn--fill {
+        background: #4b9393;
+        color: rgba(255,255,255,0.95);
+        filter: drop-shadow(0);
+        font-weight: bold;
+    }
+    
+
+
+    .card i {
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
     }
 
 
@@ -2448,10 +2739,965 @@ main {
 
 
 
-  
 
-  
-  
+
+
+
+
+
+
+
+
+
+    /*lets play*/
+    .lets-play {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .play {
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        background-color: #ededec;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        max-width: 360px;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    .video__iframe {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video__title {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .video__description,
+    .video__company {
+        text-align: center;
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Footer */
+    .prefooter {
+        background-color: #202626;
+        color: white;
+        font-size: 15px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .prefooter__information {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prefooter__heading {
+        color: #4b9393;
+        margin-top: 30px;
+    }
+
+    .prefooter__link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    .prefooter__adress,
+    .prefooter__text {
+        margin-bottom: 20px;
+    }
+
+    .prefooter__map {
+        width: 100%;
+        height: 200px;
+    }
+
+    .prefooter__left-column,
+    .prefooter__right-column {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-top: #fff;
+        background-color: rgba(16, 21, 21, 0.956);
+        color: #fff;
+        align-items: center;
+    }
+
+    .footer__icon {
+        font-size: 22px;
+        color: #4b9393;
+        margin-right: 20px;
+    }
+
+    .footer-icons {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .footer__nav {
+        margin-bottom: 40px;
+    }
+
+    .footer__nav--text {
+        text-decoration: none;
+        color: #fff;
+        font-size: 11px;
+        margin-right: 20px;
+    }
+
+    .footer__nav--text-first {
+        margin-left: 10px;
+    }
+
+    .left-corner__icon {
+        color: #4b9393;
+        padding-left: 20px;
+        padding-top: 40px;
+        margin-right: 10px;
+    }
+
+    .left-corner {
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*select-console*/
+    .platforms {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 80px;
+        color: #333;
+        width: 80px;
+        padding-top: 50px;
+    }
+
+    .games-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .platform {
+        flex: 0 0 calc(100% / 4);
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        margin: 10px;
+        text-align: center;
+        width: 320px;
+    }
+        
+    .platform:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 4px rgba(18, 133, 133, 0.19);
+    }
+
+    .platform__icon {
+        padding: 50px 0;
+        color: #4b9393;
+    }
+
+    .platform__name{
+        margin-bottom: 40px;
+    }
+
+    .platform__link {
+        text-decoration: none;
+        color: #202626;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*genres*/
+
+    .genre__item--type  {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(33, 37, 36, 0.15);
+        text-align: center;
+        width: 200px;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+    }
+
+    .genre {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 30px 20px 80px 20px; 
+        align-items: center;
+    }
+
+    .genre__item {
+        width: 200px;
+        box-sizing: border-box;
+        border: 1px solid #ddd; /* Rám okolo položiek */
+        padding: 10px; /* Odsadenie vnútri položiek */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: #333; /* Farba textu */
+        font-weight: bold; /* Tučné písmo */
+        border-radius: 20px;  
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*games*/
+    .wrap {
+        display: flex;
+    }
+
+    .games {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 80px;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*game*/
+    .two-columns {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 50px;
+    }
+
+    .two-columns__first-column {
+        flex: 1;
+    }
+
+    .second-column {
+        flex: 2;
+        padding: 0 20px; 
+        margin-top: 27px;
+        display: flex;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .solo-card__image {
+        height: 250px;
+    }
+
+    .solo-card {
+        height: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 450px;
+    }
+
+    .second-column__card--one {
+        height: 400px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 20px;
+        width: 450px;
+    }
+
+    .second-column__header {
+        font-size: 30px;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0 10px;
+        margin-top: 20px; 
+    }
+
+    .column__prize {
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    .column__line-through {
+        text-decoration: line-through;
+        color: #848a8a;
+    }
+
+    .column__last-prize {
+        font-size: 30px;
+    }
+
+    .column__availability {
+        font-weight: 700;
+    }
+
+    .column__availability-label {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .btn-game {
+        display: inline-block;
+        margin-top: 60px;
+    }
+
+    .btn-game a {
+        padding: 15px 50px;
+    }
+
+    .video-trailer {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .video-trailer__iframe {
+        width: 100%;
+        height: 300px;
+        display: inline-block;
+    }
+
+    .second-half {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        margin: 60px 10px 80px 10px;
+        gap: 60px;
+    }
+
+    .game-description {
+        margin-top: 60px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+        padding: 20px;
+        line-height: 1.6; /* Riadkovanie textu */
+    }
+
+    .game-description_title {
+        text-align: center;
+        border-bottom: 2px solid #9f9f9f; /* Horizontálny oddeľovač pod nadpisom */
+        padding-bottom: 10px; /* Odsadenie pod nadpisom */
+        margin-bottom: 20px; /* Odsadenie od obsahu */
+        font-size: 30px;
+    }
+
+    .game-parameters {
+        margin: auto;
+        margin-right: 40px;
+    }
+
+
+    .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .details-table__data {
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .details-table__header {
+        background-color: #4b93932a;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* cart */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-order__heading {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .form-field {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .from-order {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-order__heading {
+        margin-top: 100px;
+    }
+
+    .cart-product,
+    .cart-prize,
+    .cart-name,
+    .cart-surname,
+    .cart-number,
+    .cart-email,
+    .cart-adress,
+    .cart-city,
+    .cart-psc {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px; 
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .cart-product__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-product__label {
+        margin-left: 20px;
+    }
+
+    .cart-prize__input {
+        width: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-prize__label {
+        margin-left: 20px;
+    }
+
+    .cart-name__input {
+        width: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-name__label {
+        margin-left: 20px;
+    }
+
+    .cart-surname__input {    
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-surname__label {
+        margin-left: 20px;
+    }
+
+    .cart-number__input {
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-number__label {
+        margin-left: 20px;
+    }
+
+    .cart-email__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-email__label {
+        margin-left: 20px;
+    }
+
+    .cart-adress__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-adress__label {
+        margin-left: 20px;
+    }
+
+    .cart-city__input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-city__label {
+        margin-left: 20px;
+    }
+
+    .cart-psc__input {
+        width: 150px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .cart-psc__label {
+        margin-left: 20px;
+    }
+
+    .form-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    .radio-item {
+        display: flex;
+        align-items: center;  
+    }
+
+    .radio-check {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        display: inline;
+        margin-top: 30px; 
+        justify-content: space-between;
+        white-space: nowrap;
+    }
+
+    .form-checkbox {
+        display: inline;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .radio-ceck__label {
+        text-align: center;
+    }
+
+    .radio-check__input {
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    }
+
+    .radio-info {
+        margin-left: 300px;
+        margin-top: 20px;
+        white-space: nowrap;
+    }
+    
+    .required {
+        color: red
+    }
+
+    .form-field__notes {
+        margin-top: 30px;
+    }
+
+    .form-field__textarea {
+        padding: 15px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Border radius 20px */
+        margin: 20px;
+        width: 75%;
+    
+    }
+
+    .checkbox__button-wrapper{
+        display: flex;
+        margin: 18px 20px;
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .btn,
+    .btn {
+        margin-left: 10px;
+    }
+    
+    .btn--outline {
+        background: transparent;
+        color: #4b9393;
+        border: 1px solid #4b9393;
+    }
+
+    .btn--fill {
+        background: #4b9393;
+        color: rgba(255,255,255,0.95);
+        filter: drop-shadow(0);
+        font-weight: bold;
+    }
+
+    .checkbox__button-wrapper{
+        display: flex;
+        margin: 60px;
+        
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*Login*/
+    /*Prihlásenie*/
+    .account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .account__card {
+        width: 75%;
+        height: 450px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-align: center; 
+        margin-bottom: 80px;
+    }
+
+    .account__input {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        
+    }
+
+    .account__heading {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .account__form {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .account__fieldset {
+        margin-bottom: 20px;
+    }
+
+    .account__input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .account__label {
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    .account__input-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+
+    .account__password-container {
+        position: relative;
+    }
+
+    .account__password-field {
+        margin-bottom: 20px;
+        text-align: center; 
+        margin-left: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .btn--login {
+        margin-top: 20px;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* consoles*/
+    .consoles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .console {
+        width: 400px;
+    
+    }
+    .main-console {
+        display: flex;
+        justify-content: center;
+    }
+
+    .last {
+        margin-bottom: 80px;
+        
+    }
+
+
+    .console__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+        }
+
+
+
+
+
+
+
+
+    
+
+    
+    
 
 
 
