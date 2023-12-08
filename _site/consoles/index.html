@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play studio</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+
+    <script src="https://kit.fontawesome.com/2afa4a569d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/glide.core.min.css">
+    <link rel="stylesheet" href="/css/glide.theme.min.css">
+</head>
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <img class="header__logo" src="/images/logo.png" alt="logo">
+    
+        <form class="header__search-bar">
+            <input type="search" placeholder="Hľadať..." class="header__search--input">
+        </form> 
+
+        <div class="header__personal">
+            <i class="fa-solid fa-user header__personal-icon"></i><a class="nav__text" href="/login/">Prihlásiť</a>
+            <i class="fa-solid fa-cart-shopping header__personal-icon--last"></i><a class="nav__text nav__text--hidden" href="#">Košík</a>
+        </div>
+    </header>
+    
+    <!--Navigácia-->
+    <div class="nav">
+        <a class="nav__text nav__text--active" href="/">DOMOV</a>
+        <a class="nav__text" href="/select-console/">HRY</a>
+        <a class="nav__text" href="/consoles/">KONZOLY</a>
+        <a class="nav__text" href="/accessories/">PRÍSLUŠENSTVO</a>
+    </div>
+
+    <nav class="menu">
+        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+
+        <label for="menu-checkbox" class="menu__toggler">☰</label>
+
+        <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="/">DOMOV</a></li>
+            <li class="menu__item"><a class="menu__link" href="/select-console/">HRY</a></li>
+            <li class="menu__item"><a class="menu__link" href="/consoles/">KONZOLY</a></li>
+            <li class="menu__item"><a class="menu__link" href="/accessories/">PRÍSLUŠENSTVO</a></li>
+        </ul>
+
+        <form class="nav__search-bar">
+            <input type="search" placeholder="Hľadať..." class="nav__search--input">
+        </form>
+    </nav>
+
+    <!--Slajdy-->
+    <div class="glide">
+		<div class="glide__track" data-glide-el="track">
+		  <ul class="glide__slides">
+			<li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+			<li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+            <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+		  </ul>
+		</div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+            <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+            <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+        </div>
+    </div>
+
+    <script src="glide.min.js"></script> 
+
+    <script>
+        new Glide('.glide', {
+            autoplay: 7000,
+            type: "carousel"
+        }).mount()
+    </script>
+
+    <main>
+        
+<!-- konzoly -->
+<div class="left-corner">
+    <a class="left-corner__link" href="/" title="home">
+        <i class="fa-solid fa-house left-corner__icon"></i></a>
+        &gt; <a href="/consoles/">KONZOLY</a> 
+</div>
+
+<section class="action wrap">
+    <div class="consoles">
+        <div>
+            <div class="card console">
+                <img class="image" src="/images/Playstation 3.webp" alt="game">
+                <p class="card__title">Playstation 3</p>
+                <p class="card__prize">19,90 &euro;</p>
+
+                <div class="card__button-wrapper console__wrapper"> 
+                    <a class="btn btn--outline" href="/game/">DETAILY</a>
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="card console">
+                <img class="image" src="/images/Playstation 5.webp" alt="game">
+                <p class="card__title">Playstation 5</p>
+                <p class="card__prize">19,90 &euro;</p>
+
+                <div class="card__button-wrapper console__wrapper"> 
+                    <a class="btn btn--outline" href="/game/">DETAILY</a>
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="card console last">
+                <img class="image" src="/images/Xbox-Series-S.webp" alt="console">
+                <p class="card__title">Horizon Forbidden West</p>
+                <p class="card__prize">19,90 &euro;</p>
+
+                <div class="card__button-wrapper console__wrapper"> 
+                    <a class="btn btn--outline" href="/game/">DETAILY</a>
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+        <!--Footer-->
+    <section class="prefooter">
+        <div class="prefooter__information">
+            <iframe class="prefooter__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.0663554659254!2d17.107813076190986!3d48.14752595046879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8944cf0f91f9%3A0x17a42d96b2f80cfd!2sObchodn%C3%A1%2C%20811%2006%20Bratislava%2C%20Slovensko!5e0!3m2!1ssk!2scz!4v1700136519965!5m2!1ssk!2scz" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+            
+            <div class="prefooter__left-column">
+                <h2 class="prefooter__heading">O NÁS</h2>
+                <a class="prefooter__link" href="mailto:info@playstore.com">info@playstore.com</a>
+                <a class="prefooter__link" href="tel:+421703173297">+421 703 173 297</a>
+                <p class="prefooter__adress">Obchodná ulica, 811 06 Bratislava</p>
+            </div>
+            
+            <div class="prefooter__right-column">
+                <h2 class="prefooter__heading">ZÁZANÍCKY SERVIS</h2>
+                <p class="prefooter__text">Doprava a platba</p>
+                <p class="prefooter__text">Reklamácia</p>
+                <p class="prefooter__text">Obchodné podmienky</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/" title="icon" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" title="icon" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/" title="icon" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/" title="icon" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        
+        <div class="footer__nav">
+            <a class="footer__nav--text footer__nav--text-first" href="/">DOMOV</a>
+            <a class="footer__nav--text" href="/select-console/">HRY</a>
+            <a class="footer__nav--text" href="/consoles/">KONZOLY</a>
+            <a class="footer__nav--text " href="/accessories/">PRÍSLUŠENSTVO</a>
+        </div>
+    </footer>
+
+</body>
+</html>
