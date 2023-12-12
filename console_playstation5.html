@@ -1,0 +1,133 @@
+---
+layout: template.njk
+title: Final project v Eleventy
+---
+
+ <!--Slajdy-->
+ <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+        <li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+        <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+    </div>
+</div>
+
+<script src="glide.min.js"></script> 
+
+<script>
+    new Glide('.glide', {
+        autoplay: 7000,
+        type: "carousel"
+    }).mount()
+</script>
+
+<!-- Jedna hra -->
+<div class="left-corner">
+    <a class="left-corner__link" href="/" title="home">
+        <i class="fa-solid fa-house left-corner__icon"></i></a>
+        &gt; <a href="/consoles/">KONZOLY</a> &gt; PlayStation 5
+</div>
+
+<main>
+    <div class="two-columns">
+        <div class="two-columns__first-column">
+            <div class="card solo-card">
+                <img class="solo-card__image" src="/images/Playstation 5.webp" alt="game">
+            </div>
+        </div>
+    
+        <div class="second-column">
+            <div class="second-column__card--one">
+                <h1 class="second-column__header">PlayStation 5 825 GB</h1>
+                <div class="columns">
+                    <div class="column">
+                    <p class="column__prize column__line-through">597,70 &euro;</p>
+                    <p class="column__prize column__last-prize">572,07 &euro;</p>
+                </div>
+
+                <div class="column">
+                    <p class="column__availability">SKLADOM</p>
+                    <p class="column__availability-label">Môžeme doručiť do Vianoc</p>
+                </div> 
+                </div>
+                
+                <div class="card__button-wrapper btn-game">
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-trailer">
+        <iframe class="video-trailer__iframe" width="200" height="150" src="https://www.youtube.com/embed/RkC0l4iekYo" title="video"></iframe>
+    </div>
+
+    <div class="second-half">
+        <div class="game-description">
+            <h2 class="game-description__title">Popis PlayStation 5</h2>
+            <p class="game-description__text"><b>PlayStation 5 (PS5)</b> je najnovšia herná konzola od spoločnosti Sony, ktorá bola uvedená na trh v novembri 2020.</p>
+
+            <p class="game-description__text"><b>Výkon a hardware:</b> PS5 disponuje vysokým výkonom vďaka vlastnému procesoru AMD Ryzen Zen 2 a grafickej karte RDNA 2. To umožňuje podporu ray tracingu a vysokého rozlíšenia.</p>
+        
+            <p class="game-description__text"><b>HUltra HD Blu-ray prehrávač:</b> PS5 podporuje Ultra HD Blu-ray disky, čo umožňuje hráčom užívať si vysokokvalitnú grafiku a zvuk pri prehrávaní hier aj filmov.</p>
+        
+            <p class="game-description__text"><b>Ovládač DualSense:</b> Dodáva sa s inovatívnym ovládačom DualSense, ktorý má pokročilé pohybové senzory, adaptívne spúšte a haptickú spätnú väzbu, čo pridáva hlbšiu úroveň zážitku pri hraní.</p>
+        
+            <p class="game-description__text"><b>Design a Estetika:</b> PS5 má moderný a futuristický dizajn s výraznými krivkami a LED podsvietením. Jej veľkosť a design sú značne odlišné od predchádzajúich modelov PlayStation.</p>
+
+            <p class="game-description__text"><b>Zpätná kompatibilita:</b> Konzola je spätne kompatibilná s určitými hrami z predchádzajúcich generácií PS4, čo umožňuje hráčom prístup k širokej škále hier bez ohľadu na generáciu.</p>
+        
+            <p class="game-description__text"><b>Ukladanie a Kapacita:</b> PS5 je dodávaná s interným úložným priestorom SSD, čo zabezpečuje rýchlejšie načítavanie hier a celkový výkon. Kapacita 825 GB poskytuje dostatok miesta na ukladanie hier a multimediálneho obsahu.</p>
+        </div>
+
+        <div class="game-parameters">
+                <table class="details-table">
+                    <tr>
+                        <th class="details-table__header">Detaily</th>
+                        <th class="details-table__header">Informácie</th>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Kapacita</td>
+                        <td class="details-table__data">825 GB</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Pamäť SSD</td>
+                        <td class="details-table__data">825 GB</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">CPU</td>
+                        <td class="details-table__data">8x AMD Zen 2</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">GPU</td>
+                        <td class="details-table__data">AMD RDNA 2</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Stav</td>
+                        <td class="details-table__data">Nové</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">RAM</td>
+                        <td class="details-table__data">16 GB GDDR6</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Vstupy/Výstupy:</td>
+                        <td class="details-table__data">1x HDMI 2.1, 1x Type-A port, 2x Type-A port, 1x Type-C port</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</main>

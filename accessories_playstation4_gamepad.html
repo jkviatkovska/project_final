@@ -1,0 +1,113 @@
+---
+layout: template.njk
+title: Final project v Eleventy
+---
+
+ <!--Slajdy-->
+ <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+        <li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+        <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+    </div>
+</div>
+
+<script src="glide.min.js"></script> 
+
+<script>
+    new Glide('.glide', {
+        autoplay: 7000,
+        type: "carousel"
+    }).mount()
+</script>
+
+<!-- Jedna hra -->
+<div class="left-corner">
+    <a class="left-corner__link" href="/" title="home">
+        <i class="fa-solid fa-house left-corner__icon"></i></a>
+        &gt; <a href="/accessories/">PRÍSLUŠENSTVO</a> &gt; Sony DualShock 4 Black
+</div>
+
+<main>
+    <div class="two-columns">
+        <div class="two-columns__first-column">
+            <div class="card solo-card">
+                <img class="solo-card__image" src="/images/playstation4_gamepad.jpg" alt="game">
+            </div>
+        </div>
+    
+        <div class="second-column">
+            <div class="second-column__card--one">
+                <h1 class="second-column__header">Sony DualShock 4 Black</h1>
+                <div class="columns">
+                    <div class="column">
+                    <p class="column__prize column__line-through">65,99 &euro;</p>
+                    <p class="column__prize column__last-prize">59,25 &euro;</p>
+                </div>
+
+                <div class="column">
+                    <p class="column__availability">SKLADOM</p>
+                    <p class="column__availability-label">Môžeme doručiť do Vianoc</p>
+                </div> 
+                </div>
+                
+                <div class="card__button-wrapper btn-game">
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-half">
+        <div class="game-description">
+            <h2 class="game-description__title">Popis Sony DualShock 4</h2>
+            <p class="game-description__text"><b>Ergonomický Dizajn:</b> DualShock 4 má ergonomický dizajn, ktorý sa pohodlne drží v rukách. Jeho tvar a umiestnenie tlačidiel sú navrhnuté pre pohodlné dlhodobé používanie.</p>
+
+            <p class="game-description__text"><b>Dotykový Panel a Light Bar:</b> Ovládač obsahuje dotykový panel na prednej časti a Light Bar (svetelný panel) na zadnej časti. Tieto funkcie môžu byť využívané v rôznych hrách na interakciu a signalizáciu.</p>
+        
+            <p class="game-description__text"><b>Vibrácie a Haptic Feedback:</b> Podobne ako u predchádzajúcich verzií, DualShock 4 má vibrácie a haptic feedback pre plynulý a realistický herný zážitok.</p>
+        
+            <p class="game-description__text"><b>Share Button (Tlačidlo Sdílení):</b> Ovládač obsahuje tlačidlo Share, ktoré umožňuje hráčom rýchlo zdieľať svoje herné momenty, screenshoty a videá online.</p>
+        
+            <p class="game-description__text"><b>Zvukový Výstup a Vstup:</b> DualShock 4 má vstup na slúchadlá a reproduktor, ktorý umožňuje hráčom počúvať zvuk z konzoly priamo cez ovládač.</p>
+
+            <p class="game-description__text"><b>Rechargeable Battery (Nabíjateľná Batéria):</b> Ovládač je vybavený nabíjateľnou batériou a nabíja sa pomocou USB kábla, čo eliminuje potrebu výmeny batérií.</p>
+        
+            <p class="game-description__text"><b>Integrácia s PlayStation Network:</b> DualShock 4 je plne integrovaný s online službou PlayStation Network, čo umožňuje hráčom prístup k online multiplayeru, stahovaniu hier a ďalším funkciám.</p>
+        </div>
+
+
+    <div class="game-parameters">
+            <table class="details-table">
+                <tr>
+                    <th class="details-table__header">Detaily</th>
+                    <th class="details-table__header">Informácie</th>
+                </tr>
+                <tr>
+                    <td class="details-table__data">Typ</td>
+                    <td class="details-table__data">Ovládač</td>
+                </tr>
+                <tr>
+                    <td class="details-table__data">Záruka</td>
+                    <td class="details-table__data">12 mesiacov</td>
+                </tr>
+                <tr>
+                    <td class="details-table__data">Stav</td>
+                    <td class="details-table__data">Nové</td>
+                </tr>
+            </table>
+    </div>
+</main>

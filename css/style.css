@@ -701,6 +701,12 @@ main {
 }
 
 
+/* accessories */
+.solo-card__image--last {
+    height: 100%;
+}
+
+
 
 @media screen and (max-width: 640px) {
     /* index */
@@ -941,7 +947,7 @@ main {
     }
 
     .solo-card__image {
-        height: 250px;
+        width: 100%;
     }
 
     .solo-card {
@@ -1233,7 +1239,7 @@ main {
     }
 
     .solo-card__image {
-        height: 300px;
+        width: 100%;
     }
 
     .solo-card {
@@ -1571,7 +1577,7 @@ main {
     }
 
     .solo-card__image {
-        height: 300px;
+        width: 100%;
     }
 
     .solo-card {

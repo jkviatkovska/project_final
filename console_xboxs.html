@@ -1,0 +1,125 @@
+---
+layout: template.njk
+title: Final project v Eleventy
+---
+
+ <!--Slajdy-->
+ <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+        <li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+        <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+    </div>
+</div>
+
+<script src="glide.min.js"></script> 
+
+<script>
+    new Glide('.glide', {
+        autoplay: 7000,
+        type: "carousel"
+    }).mount()
+</script>
+
+<!-- Jedna hra -->
+<div class="left-corner">
+    <a class="left-corner__link" href="/" title="home">
+        <i class="fa-solid fa-house left-corner__icon"></i></a>
+        &gt; <a href="/consoles/">KONZOLY</a> &gt; Xbox Series S
+</div>
+
+<main>
+    <div class="two-columns">
+        <div class="two-columns__first-column">
+            <div class="card solo-card">
+                <img class="solo-card__image--last" src="/images/Xbox-Series-S.webp" alt="game">
+            </div>
+        </div>
+    
+        <div class="second-column">
+            <div class="second-column__card--one">
+                <h1 class="second-column__header">Xbox Series S 512 GB</h1>
+                <div class="columns">
+                    <div class="column">
+                    <p class="column__prize column__line-through">299,70 &euro;</p>
+                    <p class="column__prize column__last-prize">265,38 &euro;</p>
+                </div>
+
+                <div class="column">
+                    <p class="column__availability">SKLADOM</p>
+                    <p class="column__availability-label">Môžeme doručiť do Vianoc</p>
+                </div> 
+                </div>
+                
+                <div class="card__button-wrapper btn-game">
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-trailer">
+        <iframe class="video-trailer__iframe" width="200" height="150" src="https://www.youtube.com/embed/KHLfCFMKxPg" title="video"></iframe>
+    </div>
+
+    <div class="second-half">
+        <div class="game-description">
+            <h2 class="game-description__title">Popis Xbox Series S</h2>
+            <p class="game-description__text"><b>Výkon a Hardware:</b> Xbox Series S, vyvinutý spoločnosťou Microsoft, ponúka vysoký výkon vďaka vlastnému procesoru a grafickej karte. To zabezpečuje plynulý chod hier a podporu moderných grafických technológií.</p>
+
+            <p class="game-description__text"><b>Digitálna Verzia a Veľkosť:</b> Xbox Series S je navrhnutý ako digitálna konzola, čo znamená, že neobsahuje fyzické diskové mechanizmy. Tento prístup zabezpečuje kompaktný dizajn a nižšiu cenu.</p>
+        
+            <p class="game-description__text"><b>Rozlíšenie a Výstup:</b> Konzola podporuje vysoké rozlíšenie a výstup až do 1440p, čo znamená kvalitné vizuálne zážitky. Je optimalizovaná pre moderné televízory a monitory.</p>
+        
+            <p class="game-description__text"><b>Ovládač a Kompatibilita:</b> Dodáva sa s ovládačom Xbox, ktorý má pohybové senzory a ergonomický dizajn pre pohodlné hranie. Konzola je spätne kompatibilná s vybranými hrami pre staršie verzie Xbox.</p>
+        
+            <p class="game-description__text"><b>Xbox Game Pass a Cloud Gaming:</b> Xbox Series S je optimalizovaný pre služby ako Xbox Game Pass, ktorý poskytuje prístup k veľkému katalógu hier. Taktiež podporuje cloudové hranie hier, čo umožňuje prístup k hrám na diaľku.</p>
+
+            <p class="game-description__text"><b>Rýchle Načítanie a SSD:</b> S využitím SSD umožňuje rýchle načítanie hier, minimalizuje dobu čakania a umožňuje hráčom rýchlejšie prechádzať medzi hernými oblasťami.</p>
+        
+            <p class="game-description__text"><b>Online Služby a Multimédiá:</b> Xbox Live Gold a Xbox Game Pass Ultimate sú k dispozícii pre online hranie a ďalšie výhody. Konzola tiež ponúka možnosti multimédií vrátane streamovania, sledovania filmov a počúvania hudby.</p>
+        </div>
+
+        <div class="game-parameters">
+                <table class="details-table">
+                    <tr>
+                        <th class="details-table__header">Detaily</th>
+                        <th class="details-table__header">Informácie</th>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Kapacita</td>
+                        <td class="details-table__data">512 GB</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Typ vnútornej pamäte</td>
+                        <td class="details-table__data">GDDR6</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Frekvencia procesora</td>
+                        <td class="details-table__data">3.6 GHz</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Platforma</td>
+                        <td class="details-table__data">Xbox Series S</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Stav</td>
+                        <td class="details-table__data">Nové</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,117 @@
+---
+layout: template.njk
+title: Final project v Eleventy
+---
+
+ <!--Slajdy-->
+ <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
+        <li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
+        <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
+        <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
+    </div>
+</div>
+
+<script src="glide.min.js"></script> 
+
+<script>
+    new Glide('.glide', {
+        autoplay: 7000,
+        type: "carousel"
+    }).mount()
+</script>
+
+<!-- Jedna hra -->
+<div class="left-corner">
+    <a class="left-corner__link" href="/" title="home">
+        <i class="fa-solid fa-house left-corner__icon"></i></a>
+    &gt; <a href="/consoles/">KONZOLY</a> &gt; PlayStation 3
+</div>
+
+<main>
+    <div class="two-columns">
+        <div class="two-columns__first-column">
+            <div class="card solo-card">
+                <img class="solo-card__image" src="/images/Playstation 3.webp" alt="game">
+            </div>
+        </div>
+    
+        <div class="second-column">
+            <div class="second-column__card--one">
+                <h1 class="second-column__header">PlayStation 3 Slim 250 GB</h1>
+                <div class="columns">
+                    <div class="column">
+                    <p class="column__prize column__line-through">170,99 &euro;</p>
+                    <p class="column__prize column__last-prize">150,89 &euro;</p>
+                </div>
+
+                <div class="column">
+                    <p class="column__availability">SKLADOM</p>
+                    <p class="column__availability-label">Môžeme doručiť do Vianoc</p>
+                </div> 
+                </div>
+                
+                <div class="card__button-wrapper btn-game">
+                    <a class="btn btn--fill" href="/cart/">KÚPIŤ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-half">
+        <div class="game-description">
+            <h2 class="game-description__title">Popis PlayStation 3</h2>
+            <p class="game-description__text"><b>PlayStation 3 (PS3)</b> je herná konzola vyvinutá spoločnosťou Sony Computer Entertainment. Prvýkrát bola uvedená na trh v novembri 2006:</p>
+
+            <p class="game-description__text"><b>Výkon a hardware:</b> PS3 disponuje vysokým výkonom vďaka svojmu Cell mikroprocesoru, ktorý bol vyvinutý v spolupráci s firmou IBM. Obsahuje tiež grafický čip RSX od NVIDI, čo zabezpečuje kvalitnú grafiku a plynulý priebeh hier.</p>
+        
+            <p class="game-description__text"><b>Blu-ray prehrávač:</b> PS3 bola prvou hernou konzolou, ktorá podporovala Blu-ray disky, čo umožnilo hráčom užívať si vysokokvalitné video a zvuk.</p>
+        
+            <p class="game-description__text"><b>Online služby:</b> Konzola je dodávaná s bezdrôtovým ovládačom DualShock 3, ktorý obsahuje pohybové senzory a vibračnú spätnú väzbu.</p>
+        
+            <p class="game-description__text"><b>Ovládač DualShock 3:</b> Sledujte dojemný príbeh, ktorý sa odohráva v rozmanitom a vizuálne pôsobivom svete. Odhalte tajomstvá postapokalyptického sveta a objavte nové oblasti.</p>
+
+            <p class="game-description__text"><b>Multimediálne možnosti:</b> PS3 nie je len hernou konzolou; môže byť tiež používaná na prehrávanie hudby, videí a prezeranie fotografií.</p>
+        
+            <p class="game-description__text"><b>Rozšíriteľnosť a aktualizácie:</b> Užívatelia môžu rozširovať a aktualizovať svoj systém pomocou rôznych doplnkov a softvérových aktualizácií.</p>
+        </div>
+
+        <div class="game-parameters">
+                <table class="details-table">
+                    <tr>
+                        <th class="details-table__header">Detaily</th>
+                        <th class="details-table__header">Informácie</th>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Generácia</td>
+                        <td class="details-table__data">Slim</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Kapacita</td>
+                        <td class="details-table__data">250 GB</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Stav</td>
+                        <td class="details-table__data">Nové</td>
+                    </tr>
+                    <tr>
+                        <td class="details-table__data">Záruka</td>
+                        <td class="details-table__data">12 mesiacov</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</main>
