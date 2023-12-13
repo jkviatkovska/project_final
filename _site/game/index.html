@@ -33,13 +33,6 @@
     </header>
     
     <!--Navigácia-->
-    <div class="nav">
-        <a class="nav__text nav__text--active" href="/">DOMOV</a>
-        <a class="nav__text" href="/select-console/">HRY</a>
-        <a class="nav__text" href="/consoles/">KONZOLY</a>
-        <a class="nav__text" href="/accessories/">PRÍSLUŠENSTVO</a>
-    </div>
-
     <nav class="menu">
         <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
 
@@ -59,36 +52,22 @@
 
     <main>
         
+<!--Navigácia-->
+<div class="nav">
+    <a class="nav__text" href="/">DOMOV</a>
+    <a class="nav__text nav__text--active" href="/select-console/">HRY</a>
+    <a class="nav__text" href="/consoles/">KONZOLY</a>
+    <a class="nav__text" href="/accessories/">PRÍSLUŠENSTVO</a>
+</div>
+
  <!--Slajdy-->
  <div class="glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
         <li class="glide__slide"><img src="/images/Frostpunk.jpg" alt="Foto 2" width="100%"><div class="image-text">FROSTPUNK</div></li>
-        <li class="glide__slide"><img src="/images/Hogwarts Legacy.jpg" alt="Foto 3" width="100%"><div class="image-text">HOGWARTS LEGACY</div></li>
-        <li class="glide__slide"><img src="/images/Days Gone.jpg" alt="Foto 4" width="100%"><div class="image-text">DAYS GONE</div></li>
       </ul>
     </div>
-
-    <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-    </div>
-
-    <div class="glide__bullets" data-glide-el="controls[nav]">
-        <button class="glide__bullet" data-glide-dir="=0" title="button"></button>
-        <button class="glide__bullet" data-glide-dir="=1" title="button"></button>
-        <button class="glide__bullet" data-glide-dir="=2" title="button"></button>
-    </div>
 </div>
-
-<script src="glide.min.js"></script> 
-
-<script>
-    new Glide('.glide', {
-        autoplay: 7000,
-        type: "carousel"
-    }).mount()
-</script>
 
 <!-- Jedna hra -->
 <div class="left-corner">
